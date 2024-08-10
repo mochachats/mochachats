@@ -1,0 +1,39 @@
+/* src/components/Animation.css */
+
+.animation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff; /* Adjust the background color if needed */
+    position: relative;
+  }
+  
+  .cups-animation {
+    /* Add your mocha cups animation here */
+    width: 200px;
+    height: 200px;
+    background: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGxhbjNzYTl1aHZtbWlqcjIyNHVkZ2llN2tuMDZveHVsaXF1NXY0eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AiTautetbU6S65X5LE/giphy.gif') no-repeat center center;
+    background-size: contain;
+    z-index:2;
+  }
+  
+  .company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .hide {
+    display: none;
+  }
+  
