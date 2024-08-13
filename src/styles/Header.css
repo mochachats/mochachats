@@ -1,232 +1,87 @@
 .header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* background: url('./images/hero1.png') no-repeat center center/cover; */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Ensure overlay doesn't overflow */
-  }
-  
-  .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(246, 246, 246, 0.55); /* Black overlay with 50% opacity */
-    z-index: 0; /* Place the overlay behind text and other content */
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensure space is distributed between brand, links, and socials */
-    padding: 1rem;
-    position: relative;
-    top: -40%;
-    left: 0;
-    width: 100%;
-    transition: top 0.3s;
-    z-index: 1000; /* Ensure the navbar is above other content */
-  }
-  
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    margin-right: 15rem; /* Space between logo and menu items */
-  }
-  
-  .navbar-brand a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  
-  .navbar-brand img {
-    height: 30vh; /* Adjust size of the logo */
-  }
-  
-  .navbar-links {
-    display: flex;
-    align-items: center;
-    flex-grow: 1; /* Allows links to take up remaining space */
-    margin-left: 20px; /* Space between brand and menu items */
-  }
-  
+  width: 100%;
+  background-color: white; 
+  color: black;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1000;
+ 
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between brand and links */
+  padding: 0 80px 20px;
+}
+
+/* Brand styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 100px; /* Adjust size of the logo */
+}
+
+/* Links container */
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Links styling */
+.navbar-links a {
+  color: black;
+  text-decoration: none;
+  margin-left: 40px; /* Space between menu items */
+  font-size: 1.1rem;
+}
+
+.navbar-links a:hover {
+  color: #ffeb3b; /* Optional: change color on hover */
+}
+
+
+
+/* Responsive adjustments */
+
+/* Tablets and below */
+@media (max-width: 992px) {
   .navbar-links a {
-    color: black;
-    text-decoration: none;
-    margin-left: 20px; /* Space between menu items */
-    font-size: 1.3rem; 
+    margin-left: 20px;
+    font-size: 1rem;
   }
-  
-  .navbar-links a:hover {
-    text-decoration: underline; /* Optional: underline on hover */
-  }
-  
-  .navbar-socials {
-    display: flex;
-    align-items: center;
-    margin-left: 50%; /* Push social links to the right end */
-  }
-  
+
   .navbar-socials a {
-    color: black;
-    margin-left: 30px; /* Space between social icons */
-    font-size: 1.5rem; /* Adjust icon size as needed */
+    margin-left: 10px;
+    font-size: 1.2rem;
   }
-  
-  .navbar-socials a:hover {
-    color: #007bff; /* Optional: change color on hover */
+}
+
+/* Phones and small devices */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
   }
-  
-  .hero-content {
-    padding: 100px 20px;
+
+  .navbar-links {
+    margin-top: 10px;
   }
-  
-  .hero-content h1 {
-    font-size: 5em;
-    margin-bottom: 10px;
-    color: black;
-    z-index: 1; /* Ensure content is above the overlay */
+
+  .navbar-links a {
+    font-size: 0.9rem;
+    margin-left: 15px;
   }
-  
-  .hero-content p {
-    font-size: 1.5em;
-    z-index: 1; /* Ensure content is above the overlay */
+
+  .navbar-socials {
+    margin-top: 10px;
   }
-  
-  .home-container {
-    margin-top:0; /* Adjust to accommodate fixed header */
+
+  .navbar-socials a {
+    font-size: 1rem;
+    margin-left: 10px;
   }
-  
-  @media (max-width:1200px) {
-      .header{
-        height:100vh;
-      }
-      
-    .navbar {
-      flex-direction: row;
-      top: -30%;
-      padding: 0.5rem;
-    }
-    
-    .navbar-brand {
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
-    .navbar-brand img {
-      height: 20vh;
-    }
-    .navbar-links {
-      margin-left:0;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    
-    .navbar-links a {
-      font-size: 1.8rem;
-      margin-left: 30px;
-  
-    }
-    
-    .navbar-socials {
-      margin-left: 20%;
-      justify-content: center;
-    }
-    .navbar-brand img{
-      height:20vh;
-    }
-    
-    .navbar-socials a {
-      font-size: 1.5rem;
-      margin-left: 15px;
-    }
-  }
-  @media (max-width: 992px) {
-    
-    .navbar {
-      flex-direction: row;
-      top: -40%;
-      padding: 0.5rem;
-    }
-    
-    .navbar-brand {
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
-    
-    .navbar-links {
-      margin-left:0;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    
-    .navbar-links a {
-      font-size: 1.1rem;
-      margin-left: 20px;
-    }
-    
-    .navbar-socials {
-      margin-left: 20%;
-      justify-content: center;
-    }
-    
-    .navbar-socials a {
-      font-size: 1.2rem;
-      margin-left: 15px;
-    }
-  }
-  
-  /* Phones */
-  @media (max-width: 768px) {
-    .header {
-      height: 60vh;
-      text-align: center;
-    }
-    .hero-content h1 {
-      font-size: 3.8em;
-      margin-top: -20%;
-      color: black;
-      z-index: 1; /* Ensure content is above the overlay */
-    }
-    
-    .navbar {
-      flex-direction: row;
-      top: -30%;
-      padding: 0.5rem;
-    }
-    
-    .navbar-brand {
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
-    .navbar-brand img{
-      height:15vh;
-    }
-    .navbar-links {
-      margin-left: 0;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    
-    .navbar-links a {
-      font-size: 0.8rem;
-      margin-left: 15px;
-    }
-    
-    .navbar-socials {
-      margin-left: 10%;
-      justify-content: center;
-    }
-    
-    .navbar-socials a {
-      font-size: 0.8rem;
-      margin-left: 10px;
-    }
-  }
+}

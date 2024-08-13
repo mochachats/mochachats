@@ -1,45 +1,135 @@
-/* Home.css */
+.home-container {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
 
-/* Hero Section Styles */
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* background: url('./images/logo.jpeg') no-repeat center center/cover; */
   text-align: center;
   color: black;
   padding: 0 20px;
+  animation: zoomIn 1s ease-in-out;
 }
 
-.hero-content {
-  max-width: 600px;
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  animation: slideIn 1s ease-in-out;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.hero-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  animation: zoomOut 1s ease-in-out;
 }
 
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.cta-button {
-  background-color: #ff5733; /* Adjust as needed */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.section-title.in-view {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.cta-button:hover {
-  background-color: #c70039; /* Adjust as needed */
+.about-section, .services-section, .contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
+.about-content, .services-content, .contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: zoomIn 1s ease-in-out;
+}
 
+.service-card {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #e0c8bb;
+  border-radius: 10px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.roadmap-line {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.roadmap-line.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.roadmap-line line {
+  stroke: #333;
+  stroke-width: 2;
+  stroke-dasharray: 4;
+  animation: draw-line 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes draw-line {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
