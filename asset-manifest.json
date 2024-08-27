@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.b450dea5.css",
-    "main.js": "/static/js/main.9ff941d6.js",
-    "static/media/cybersecurity.png": "/static/media/cybersecurity.67f99ce36e530c8e4546.png",
-    "static/media/hero.png": "/static/media/hero.8ecd5edf057d7b1165e7.png",
-    "static/media/intro1.jpeg": "/static/media/intro1.6fe65302157f0a96402f.jpeg",
-    "static/media/career.png": "/static/media/career.d65279d20d894be23b24.png",
-    "static/media/fintech.png": "/static/media/fintech.9491f48668f10f1b2780.png",
-    "static/media/intro2.jpeg": "/static/media/intro2.dd062df5e51150ec757d.jpeg",
-    "index.html": "/index.html",
-    "main.b450dea5.css.map": "/static/css/main.b450dea5.css.map",
-    "main.9ff941d6.js.map": "/static/js/main.9ff941d6.js.map"
+    "main.css": "/mochachats/static/css/main.b450dea5.css",
+    "main.js": "/mochachats/static/js/main.b7c17b3d.js",
+    "static/media/cybersecurity.png": "/mochachats/static/media/cybersecurity.67f99ce36e530c8e4546.png",
+    "static/media/hero.png": "/mochachats/static/media/hero.8ecd5edf057d7b1165e7.png",
+    "static/media/intro1.jpeg": "/mochachats/static/media/intro1.6fe65302157f0a96402f.jpeg",
+    "static/media/career.png": "/mochachats/static/media/career.d65279d20d894be23b24.png",
+    "static/media/fintech.png": "/mochachats/static/media/fintech.9491f48668f10f1b2780.png",
+    "static/media/intro2.jpeg": "/mochachats/static/media/intro2.dd062df5e51150ec757d.jpeg",
+    "index.html": "/mochachats/index.html",
+    "main.b450dea5.css.map": "/mochachats/static/css/main.b450dea5.css.map",
+    "main.b7c17b3d.js.map": "/mochachats/static/js/main.b7c17b3d.js.map"
   },
   "entrypoints": [
     "static/css/main.b450dea5.css",
-    "static/js/main.9ff941d6.js"
+    "static/js/main.b7c17b3d.js"
   ]
 }
