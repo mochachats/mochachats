@@ -1,6 +1,7 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .home-container {
   width: 100%;
   background-color: #fff;
@@ -12,7 +13,8 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
+  margin-bottom: 5%;
   text-align: center;
   color: black;
   padding: 0 20px;
@@ -110,13 +112,15 @@ body{
   text-align: left;
 }
 
-.about-button {
+.about-button, .about-button a {
   padding: 20px 20px 20px;
   background-color: white;
   color: black;
   font-size: 1rem;
   border-radius: 0px;
   cursor: pointer;
+  text-decoration: none; /* Ensures no underline on link */
+  display: inline-block; /* Makes sure the link behaves like a button */
 }
 
 .about-button:hover {
@@ -139,85 +143,79 @@ body{
 }
 
 /* Services Section */
-.services-section {
-  padding: 50px 20px;
+.service-home {
+  padding: 60px 20px;
   text-align: center;
 }
 
-.service-title {
-  font-size: 2.5rem;
+.service-home-title {
+  font-size: 2.8rem;
   margin-bottom: 40px;
   color: #333;
+  font-weight: bold;
 }
 
-.service-cards-container {
+.service-home-cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  position: relative;
-  padding-top:40px;
+  padding-top: 40px;
 }
 
-.service-card {
-  background-color: #f5e7df;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.244);
+.service-home-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  width: 300px;
+  width: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  animation: hoverAnim 3s ease-in-out infinite alternate;
+  border: 1px solid #ddd;
 }
 
-.service-card:hover {
-  animation-play-state: paused;
-  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  cursor:pointer;
-}
-
-@keyframes hoverAnim {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.service-icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.service-card-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.service-card-description {
-  font-size: 1rem;
-  color: #666;
-  line-height:1.6;
-}
-.services-button{
-  padding: 20px 20px 20px;
-  margin-top: 5%;
-  background-color: white;
-  color: black;
-  font-size: 1rem;
-  border-radius: 0px;
+.service-home-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
-.services-button:hover {
-  background-color: rgb(188, 138, 114);
+.service-home-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-home-card-title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.service-home-card-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.service-home-button, .service-home-button a {
+  padding: 20px 30px 20px;
+  background-color: black;
   color: white;
-  border: 2px solid black;
+  font-size: 1rem;
+  border-radius: 0px;
+  cursor: pointer;
+  text-decoration: none; /* Ensures no underline on link */
+  display: inline-block; /* Makes sure the link behaves like a button */
+  margin-top: 5%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-home-button:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
 }
 
 .contact-section {
@@ -246,8 +244,8 @@ body{
 .contact-section {
   padding: 50px 20px;
   background-color: white;
-  margin-top:10%;
-  border-top:2px dashed black;
+  margin-top: 10%;
+  border-top: 2px dashed black;
 }
 
 .contact-container {
@@ -308,7 +306,7 @@ body{
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: #666;
-  line-height:1.6;
+  line-height: 1.6;
 }
 
 .contact-button {
@@ -318,12 +316,13 @@ body{
   font-size: 1.2rem;
   border-radius: 0px;
   cursor: pointer;
-  max-width:20vw;
-  margin-left:30%;
+  max-width: 20vw;
+  margin-left: 30%;
+  text-decoration: none; /* Ensures no underline on link */
 }
 
 .contact-button:hover {
   background-color: white;
   color: black;
-  border-color:black;
+  border-color: black;
 }

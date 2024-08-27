@@ -1,0 +1,85 @@
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: white;
+    margin-top:10%;
+    border-top:2px dashed black;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .collage-container {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .collage-image {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .image1 {
+    height: 300px;
+    width: 200px;
+    z-index: 3;
+  }
+  
+  .image2 {
+    height: 400px;
+    width: 250px;
+    margin-top: -100px; /* Adjust this value to overlap */
+    z-index: 2;
+  }
+  
+  .image3 {
+    height: 200px;
+    width: 150px;
+    margin-top: -50px; /* Adjust this value to overlap */
+    z-index: 1;
+  }
+  
+  .contact-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
+    line-height:1.6;
+  }
+  
+  .contact-button {
+    padding: 25px 20px 25px;
+    background-color: rgb(188, 138, 114);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0px;
+    cursor: pointer;
+    max-width:20vw;
+    margin-left:30%;
+  }
+  
+  .contact-button:hover {
+    background-color: white;
+    color: black;
+    border-color:black;
+  }

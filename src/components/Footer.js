@@ -1,4 +1,3 @@
-// src/components/Footer.js
 import React from 'react';
 import '../styles/Footer.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
@@ -15,21 +14,15 @@ const Footer = () => {
           <div className="footer-links footer-right">
             <div>
               <h3>Company</h3>
-              <a href="#">About Us</a>
-              <a href="#">Careers</a>
-              <a href="#">Press</a>
+              <a href="/about">About Us</a>
+              <a href="https://mpara17.hashnode.dev/">Community</a>
+              <a href="/services">Services</a>
             </div>
-            <div>
-              <h3>Services</h3>
-              <a href="#">Career Advice</a>
-              <a href="#">Coffee Meetups</a>
-              <a href="#">Consultations</a>
-            </div>
+            
             <div>
               <h3>Contact</h3>
-              <a href="#">Contact Us</a>
-              <a href="#">Support</a>
-              <a href="#">FAQ</a>
+              {/* <a href="mailto:mochachatsteam@gmail.com">Email: mochachatsteam@gmail.com</a> */}
+              <p>If you have any questions or need assistance, feel free to reach out to us at <strong><a href="mailto:mochachatsteam@gmail.com">mochachatsteam@gmail.com</a></strong>.</p>
             </div>
           </div>
         </div>
